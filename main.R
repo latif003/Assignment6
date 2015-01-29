@@ -43,14 +43,6 @@ greenest.city (ndvidf, "January") # the greenest municipality of January is Litt
 greenest.city (ndvidf, "August") # the greenest municipality of August is Vorden
 greenest.city (ndvidf, "annualMean") # the greenest municipality of the year is Graafstroom
 
-## create an anual column in data frame to calculate the average of ndvi value all over the year
-ndviCity$annualMean <- rowMeans(ndviCity [,-1:-15], na.rm = TRUE)
-
-## greenest municipality of the selected month and greenest municipality of the year
-greenest.city (ndviCity, "January") # the greenest municipality of January is Littenseradiel
-greenest.city (ndviCity, "August") # the greenest municipality of August is Vorden
-greenest.city (ndviCity, "annualMean") # the greenest municipality of the year is Graafstroom
-
 # plot the result for January 
 ## define the greenest city of January
 gr_january <- as.character(greenest.city (ndvidf, "January"))
